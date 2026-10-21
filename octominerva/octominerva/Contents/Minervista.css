@@ -1,0 +1,182 @@
+.om-blogPostTitle {
+    margin-bottom: 2px;
+}
+
+.om-blogPostAuthor {
+    color: #32A39F;
+    font-size: 16px;
+}
+
+.om-blogPostDate {
+    color: #32A39F;
+    font-size: 12px;
+}
+
+.om-blogPostContent {
+    margin-top: 10px;
+    position: relative;
+    overflow: auto;
+}
+
+    .om-blogPostContent iframe {
+        width: 100%;
+        max-width: 560px;
+        margin: 10px 0px;
+    }
+
+    .om-blogPostContent img {
+        margin: 10px 0px;
+    }
+
+.om-blogNavTable {
+    width: 100%;
+}
+
+    .om-blogNavTable img {
+        margin-bottom: 5px;
+    }
+
+    .om-blogNavTable a {
+        display: block;
+    }
+
+.om-blogCommentTable {
+    width: 100%;
+}
+
+td.om-blogProfile {
+    width: 45px;
+    height: 45px;
+    text-align: left;
+    background-image: url(Images/EmptyProfile.png);
+    background-repeat: no-repeat;
+}
+
+.om-blogProfile img {
+    width: 40px;
+    height: 40px;
+}
+
+.om-blogCommentCount, .om-blogCommentTime, .om-blogCommentReplyCount {
+    color: #31A6A0;
+    font-size: 12px;
+}
+
+td.om-blogComment {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.om-blogSubComment {
+    margin-top: 12px;
+}
+
+.om-blogComment div {
+    margin-bottom: 5px;
+}
+
+.om-blogCommentBox {
+    position: relative;
+    margin-right: 0px;
+}
+
+.om-commentLabel {
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.om-blogComment textarea, .om-blogComment input {
+    background: #164845;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    color: #eee;
+    padding: 4px 4px 4px 4px;
+}
+
+input.ng-dirty.ng-invalid {
+    border: 1px solid #ff0000;
+    box-shadow: 0px 0px 10px 0px #ff0000;
+}
+
+.om-blogComment input {
+    margin-bottom: 2px;
+}
+
+.om-blogComment textarea {
+    min-height: 40px;
+    padding: 4px 4px 0px 4px;
+}
+
+::-webkit-input-placeholder {
+    color: #bbb;
+    vertical-align: middle;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #bbb;
+    vertical-align: middle;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #bbb;
+    vertical-align: middle;
+}
+
+:-ms-input-placeholder {
+    color: #bbb;
+    vertical-align: middle;
+}
+
+input::-webkit-input-placeholder {
+    color: #337766;
+    vertical-align: middle;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #337766;
+    vertical-align: middle;
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+    color: #337766;
+    vertical-align: middle;
+}
+
+input:-ms-input-placeholder {
+    color: #337766;
+    vertical-align: middle;
+}
+
+
+.om-sendBlogComment {
+    text-align: right;
+}
+
+    .om-sendBlogComment button {
+        background: #2B413D;
+        border: 1px solid #000;
+        color: #ddd;
+        padding: 4px 10px;
+        cursor: pointer;
+    }
+
+    .om-sendBlogComment button:disabled {
+        background: #2B413D;
+        border: 1px solid #444;
+        color: #666;
+        padding: 4px 10px;
+        cursor: pointer;
+    }
+
+    .om-blogComment p
+    {
+        margin: 0px 0px 2px 0px;
+    }
+
+    .om-blogComment a {
+        cursor: pointer;
+    }

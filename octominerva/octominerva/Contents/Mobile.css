@@ -1,0 +1,161 @@
+@media (max-width: 767px) {
+    body {
+        padding: 0px;
+        margin: 0px;
+        background: #0D2B2B;
+    }
+
+    /*.om-mainPane {
+        background: none;
+        position: relative;
+    }*/
+
+    .om-mainPane, .om-mainContents {
+        position: static;
+        width: auto;
+        padding: 0px 0px;
+    }
+
+    .om-selectorPane {
+        display: none;
+    }
+
+    .om-mobileSelectorPane {
+        display: block;
+        position: fixed;
+        overflow: auto;
+        z-index: 5;
+        top: 0px;
+        bottom: 0px;
+        left: 100%;
+        width: 100%;
+        padding: 80px 20px 20px;
+        background: #0D2B2B;
+        opacity: 0.0;
+        transition: all 300ms ease-out 0s;
+        box-shadow: 30px 0px 20px -20px rgba(0,0,0, 0.4) inset;
+    }
+
+        .om-mobileSelectorPane.om-open {
+            left: 0;
+            opacity: 1;
+        }
+
+    .om-mobileSelectorSwitch {
+        display: block;
+        position: absolute;
+        z-index: 15;
+        top: 30px;
+        right: 20px;
+        border: none;
+        background: none;
+        background-repeat: no-repeat;
+        background-image: url(Images/OMC_Arrow.png);
+        background-position: right center;
+        padding: 4px 28px;
+        color: #45A6DB;
+        outline: none;
+    }
+
+        .om-mobileSelectorSwitch.om-open {
+            background-position: left center;
+            padding: 4px 28px;
+            background-image: url(Images/OMC_Arrow_left.png);
+        }
+
+    .om-mainNav {
+        margin: 0px;
+    }
+
+    .om-bottomNav {
+        margin-top: 50px;
+        position: static;
+    }
+
+    .om-mainLogo {
+        display: none;
+    }
+
+    .om-mainPaneBackground {
+        z-index: -1;
+        position: fixed;
+    }
+
+    .om-mainMobileLogo {
+        display: block;
+        position: absolute;
+        height: 80px;
+        width: 100%;
+        z-index: 10;
+        background-position-x: -20px;
+        background-repeat: no-repeat;
+        background-image: url('Images/OMC_Logo.png');
+        background-size: contain;
+    }
+
+    .om-mainContents {
+        /*background-image: none;*/
+        background-size: 70px;
+        padding: 0px 0 0 78px;
+        min-width: initial;
+        background-position-x: 0px;
+    }
+
+        .om-mainContents h1 {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .om-mainContents h3, .om-mainContents h2 {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+    .om-mainContainer {
+        margin: 80px 10px 20px;
+    }
+
+    .om-sliderContainer {
+        top: 80px;
+        left: 20px;
+        right: 20px;
+        max-width: 511px;
+        width: auto;
+    }
+
+    .om-textSlide h1 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 510px) {
+    .om-textSlide h1 {
+        font-size: 23px;
+        line-height: 24px;
+    }
+
+    .om-titleEndQuote {
+        width: 14px;
+    }
+
+    .om-sliderLink {
+        margin-top: -56px;
+    }
+}
+
+@media (max-width: 430px) {
+    .om-textSlide h1 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .om-titleEndQuote {
+        width: 14px;
+    }
+
+    .om-sliderLink {
+        font-size: 12px;
+        margin-top: -48px;
+    }
+}

@@ -1,0 +1,48 @@
+<div class="testPageContainer" ng-controller="SelectorController as sc">
+    <h1>BlogCom tester</h1>
+    <p>
+        Blog API docs: <a href="http://wp-api.org/" target="_blank">http://wp-api.org/</a>
+    </p>
+    <p>
+        Blog posts url <a href="http://octominervablog2.gear.host/wp-json/posts" target="_blank">http://octominervablog2.gear.host/wp-json/posts</a>
+    </p>
+
+    <div class="testcollaps">
+        <div class="title" ng-click="test1 = !test1" ng-class="{closed: !test1}">
+            Getting posts from http://octominervablog2.gear.host/wp-json/posts
+        </div>
+        <pre class="contents" ng-show="test1">{{postsUrlText}}</pre>
+    </div>
+
+    <div class="testcollaps">
+        <div class="title" ng-click="test2 = !test2" ng-class="{closed: !test2}">
+            Processed period list
+        </div>
+        <pre class="contents" ng-show="test2">{{postPeriodsText}}</pre>
+    </div>
+
+    <div class="testcollaps">
+        <div class="title" ng-click="test3 = !test3" ng-class="{closed: !test3}">
+            Post selector test
+        </div>
+        <div class="contents" ng-show="test3">
+            <ul>
+                <li ng-repeat="period in postPeriods">
+                    {{period.period}}
+
+                    <ul ng-show="period.posts.length">
+                        <li ng-repeat="post in period.posts">
+                            {{post.title}}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <blogselector></blogselector>
+        </div>
+    </div>
+
+    <script>
+        $(".testcollaps").each(function () {
+        });
+    </script>

@@ -1,0 +1,15 @@
+<ul ng-class="openClassFor('minervista')" class="om-nav om-subNav">
+    <li ng-repeat="period in postPeriods" class="om-periodNav">
+        <a ng-class="getBlogPeriodClassFor(period)" onclick="return 0;">
+            {{period.period}}
+        </a>
+
+        <ul ng-show="period.posts.length" class="om-nav om-subNav om-openSubNav">
+            <li ng-repeat="post in period.posts" class="om-postNav">
+                <a ng-href="{{generatePostUrl(post.post)}}" ng-class="getBlogClassFor(post)">
+                    {{post.title}}
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

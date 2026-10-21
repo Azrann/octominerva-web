@@ -1,0 +1,402 @@
+@font-face {
+font-family: 'Segan Light','Helvetica Neue', Arial;
+font-style: normal;
+font-weight: normal;
+src: url(../font/Segan-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 200;
+    src: local("Segoe UI Light");
+}
+
+html {
+    height: 100%;
+    background: inherit;
+}
+
+body {
+	font-family: Segoe UI;
+    color: #CBDEF4;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+a {
+    font-size: 20pt;
+	color: #49B4ED;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+span:hover {
+	color: #CBDEF4;
+    cursor: pointer;
+}
+
+h1 {
+    margin: -12px 5px 0px 10px;
+    font-size: 32pt;
+    line-height: 36pt;
+    font-weight: 100;
+}
+
+span.big {
+    font-size: 14pt;
+    line-height: 18pt;
+}
+
+span.normal, span.normal a {
+    font-size: 12pt;
+}
+
+.quote {
+    font-family: 'Segoe UI';
+    font-size: 94pt;
+}
+
+.content 
+{
+    background-image: 
+}
+#sidebar {
+    font-size: 14pt;
+    line-height: 30pt;
+    color: #49B4ED;
+}
+
+#nav-control {
+    margin-bottom: 155px;
+}
+
+.nav-subsection {
+    padding-left: 20px;
+    font-size: 12pt;
+    line-height: 30pt;
+}
+
+.nav-delimiter {
+    height: 1px;
+    width:  230px;
+    background: -webkit-linear-gradient(left,#0a2222, #104148, #0a2222); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right,#0a2222, #104148, #0a2222); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right,#0a2222, #104148, #0a2222); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(right,#0a2222, #104148, #0a2222); /* Standard syntax (must be last) */
+}
+.nav-section.selected {
+    color: #CBDEF4;
+}
+
+.nav-section.selected .nav-subsection{
+    color: #49B4ED;
+}
+
+.nav-section.selected .nav-subsection.selected{
+    color: #CBDEF4;
+}
+
+.read-more-container a {
+    font-size: 16pt;
+}
+
+#footer a {
+    font-size: 12pt;
+    line-height: 20pt;
+}
+
+#footer a:hover,#footer a:active {
+    text-decoration: none;
+    color: #CBDEF4;
+}
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap-content {
+    display: inline-block;
+    position: relative;
+	width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 300px;
+    height: 100%;
+}
+
+#pagewrap-sidebar {
+   display: inline-block;
+    position: relative;
+	width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
+    height: 100%;
+}
+
+#header {
+	height: 120px;
+    cursor: pointer;
+}
+#feature-header {
+    padding: 1px 50px 0px 160px;
+    width:  405px;
+    
+}
+
+#content {
+	width: 600px;
+	display: inline-block;
+    position: absolute;
+    right: 15px;
+    padding: 0px 20px 0px 20px;
+}
+
+.content-background {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    right: 0px;
+    bottom:  0px;
+    z-index: -1;
+}
+.read-more-container {
+    position: absolute;
+    top: 355px;
+    padding-left: 15px;
+}
+#sidebar {
+	width: 300px;
+    display: inline-block;
+    min-height: 300px;
+    vertical-align:top;
+    position: absolute;
+	left:  20px;
+    top: 120px;
+    bottom: 2px;
+}
+
+#sidebar-container {
+  position: relative;
+  display: block;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    right: -320px;
+    height: 155px;
+    width: 300px;
+}
+
+#footer-mobile {
+    display: none;
+}
+
+.copywrite {
+    padding-top: 15px;
+}
+
+/* border & guideline (you can ignore these) */
+body {
+	background: #0a2222;
+}
+#pagewrap-content {
+	background: #0d2b2b;
+}
+#header, #content {
+	margin-bottom: 5px;
+}
+#header {
+    background-image: url('../img/OMC_Logo.png');
+    background-size:50%;
+    background-repeat:no-repeat;
+}
+#feature-header {
+    background-repeat:no-repeat;
+    min-height: 334px;
+}
+
+
+#feature-header.lets {
+    background-image: url('../img/OMC_L0_CS1-Image.png');
+}
+
+#feature-header.wake {
+    background-image: url('../img/OMC_FeatureImageArea.png');
+}
+
+#feature-header.what {
+    background-image: url('../img/OMC_FeatureImageArea.png');
+}
+
+#feature-header.because {
+    background-image: url('../img/OMC_FeatureImageArea.png');
+}
+
+#feature-header.building {
+    background-image: url('../img/OMC_L0_CS5-Image.png');
+}
+
+.read-more {
+    padding-left: 30px;
+    padding-right: 100px;
+    background: url('../img/OMC_Arrow.png') left no-repeat;
+}
+.read-more:hover,.read-more:active {
+    text-decoration: none;
+    color: #CBDEF4;
+}
+
+.read-more a {
+    font-size: 12pt;
+}
+
+.read-more.no-padding {
+    padding-right:0px;
+}
+
+.read-more-container > div:first-of-type {
+    display: inline-block;
+    padding-bottom: 2px;
+}
+.square {
+    height: 26px;
+    width: 24px;
+    display: inline-block;
+    background: url('../img/OMC_Pagination_OFF.jpg') left no-repeat; 
+    vertical-align: bottom;
+}
+
+.square.on {
+    background: url('../img/OMC_Pagination_ON.jpg') left no-repeat;
+}
+
+.testimony-previous {
+    padding-left: 30px;
+    background: url('../img/OMC_Arrow_LEFT_01.png') left no-repeat;
+}
+
+.testimony-next {
+    padding-right: 30px;
+    float: right;
+    background: url('../img/OMC_Arrow.png') right no-repeat;
+}
+
+.testimony-link:hover,.testimony-link:active {
+    text-decoration: none;
+    color: #CBDEF4;
+}
+
+.testimony-link {
+    font-size: 12pt;
+}
+
+.content-background {
+    background: url('../img/MainImage.jpg');
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:right;   
+}
+
+.content-background.letsSpend {
+    background: url('../img/OMC_BackImage_CS1.png') right no-repeat;
+}
+
+.content-background.theStory {
+    background: url('../img/OMC_BackImage_TheStory.png') right no-repeat;
+}
+
+.content-background.howItWorks {
+    background: url('../img/OMC_BackImage_HowItWorks.png') right no-repeat;
+}
+
+.content-background.acknowledgements {
+    background: url('../img/OMC_BackImage_Acknowledge.png') right no-repeat;
+}
+.content-background.getintouch {
+    background: url('../img/OMC_BackImage_GetInTouch.png') right no-repeat;
+}
+.content-background.testimony {
+    background: url('../img/OMC_BackImage_WhatClientsSay.png') right no-repeat;
+}
+.content-background.achieve {
+    background: url('../img/OMC_BackImage_WhatDoYouWant.png') right no-repeat;
+}
+.content-background.wakeFrom {
+    background: url('../img/OMC_BackImage_CS2.png') right no-repeat;
+}
+.content-background.last100days {
+    background: url('../img/OMC_BackImage_CS3.png') right no-repeat;
+}
+.content-background.because {
+    background: url('../img/OMC_BackImage_CS4.png') right no-repeat;
+}
+.content-background.carravaggio {
+    background: url('../img/OMC_BackImage_CS5.png') right no-repeat;
+}
+.content-background.sponsorship {
+    background: url('../img/OMC_BackImage_CS5.png') right no-repeat;
+}
+.content-background.minervista {
+    background: url('../img/OMC_BackImage_CS5.png') right no-repeat;
+}
+
+#feature-header.text-page{
+    padding: 0px 50px 0px 180px;
+}
+
+#feature-header.letsSpend {
+    background-image: url('../img/OMC_HomeImage_CS1.png');
+}
+#feature-header.wake {
+    background-image: url('../img/OMC_HomeImage_CS2.png');
+}
+#feature-header.what {
+    background-image: url('../img/OMC_HomeImage_CS3.png');
+}
+#feature-header.because2 {
+    background-image: url('../img/OMC_HomeImage_CS4.png');
+}
+#feature-header.theStory {
+    background-image: url('../img/OMC_Image_TheStory.png');
+}
+#feature-header.letsSpendSmall {
+    background-image: url('../img/OMC_CSImage_CS1.png');
+}
+#feature-header.howItWorks {
+    background-image: url('../img/OMC_L1_HowItWorks_Image.png');
+}
+#feature-header.acknowledgements{
+    background-image: url('../img/OMC_Image_Acknowledge.png');
+}
+#feature-header.getintouch{
+    background-image: url('../img/OMC_Image_GetInTouch.png');
+}
+#feature-header.testimony{
+    background-image: url('../img/OMC_Image_WhatClientsSay.png');
+}
+#feature-header.achieve{
+    background-image: url('../img/OMC_Image_WhatDoYouWant.png');
+}
+#feature-header.wakeFrom{
+    background-image: url('../img/OMC_CSImage_CS2.png');
+}
+#feature-header.last100days{
+    background-image: url('../img/OMC_CSImage_CS3.png');
+}
+#feature-header.because{
+    background-image: url('../img/OMC_CSImage_CS4.png');
+}
+#feature-header.carravaggio {
+    background-image: url('../img/OMC_CSImage_CS5.png');
+}
+#feature-header.sponsorship {
+    background-image: url('../img/OMC_CSImage_CS5.png');
+}
+#feature-header.minervista {
+    background-image: url('../img/OMC_CSImage_CS5.png');
+}

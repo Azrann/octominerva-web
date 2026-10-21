@@ -1,0 +1,240 @@
+.om-mainLogo {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-image: url('Images/OMC_Logo.png');
+    background-size: contain;
+    background-position: left top;
+    padding-right: 240px;
+    /*border: 1px solid green;*/
+}
+
+.om-mainContents {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    bottom: 0px;
+    padding-bottom: 20px;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: 0px 6px;
+    background-size: 135px;
+    padding-left: 180px;
+    padding-right: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    .om-mainContents h1 {
+        margin: 1px 0px 20px 0px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .om-mainContents h2 {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+    .om-mainContents h3 {
+        font-size: 24px;
+        font-weight: normal;
+        margin: 22px 0px 8px 0px;
+    }
+
+    .om-mainContents p {
+        margin: 0px 0px 10px 0px;
+        line-height: 18px;
+    }
+
+.om-mainPaneBackground {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.001;
+}
+
+.om-GetInTouch h3
+{
+    line-height: 29px;
+}
+
+.om-navLink {
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-image: url(Images/OMC_Arrow.png);
+    background-position-y: 3px;
+    padding: 4px 28px;
+}
+
+    .om-navLink.om-testimonialLink {
+        background-position-x: right;
+    }
+
+.om-navLinkBack {
+    background-image: url(Images/OMC_Arrow_left.png);
+}
+
+p.om-separateTop {
+    margin-top: 16px;
+}
+
+.om-WhatDoYouWantBackground {
+    background-image: url('Images/Quotes/OMC_Image_WhatDoYouWant.png');
+}
+
+.om-PageNotFoundBackground {
+    background-image: url('Images/Quotes/OMC_Image_404.png');
+}
+
+.om-AcknowledgementsBackground {
+    background-image: url('Images/Quotes/OMC_Image_Acknowledge.png');
+}
+
+.om-GetInTouchBackground {
+    background-image: url('Images/Quotes/OMC_Image_GetInTouch.png');
+}
+
+.om-HowItWorksBackground {
+    background-image: url('Images/Quotes/OMC_Image_HowItWorks.png');
+}
+
+.om-SponsorshipBackground {
+    background-image: url('Images/Quotes/OMC_Image_Sponsor.png');
+}
+
+.om-TheStoryBackground {
+    background-image: url('Images/Quotes/OMC_Image_TheStory.png');
+}
+
+.om-CaseStudy1Background {
+    background-image: url('Images/Quotes/OMC_CSImage_CS1.png');
+}
+
+.om-CaseStudy2Background {
+    background-image: url('Images/Quotes/OMC_CSImage_CS2.png');
+}
+
+.om-CaseStudy3Background {
+    background-image: url('Images/Quotes/OMC_CSImage_CS3.png');
+}
+
+.om-CaseStudy4Background {
+    background-image: url('Images/Quotes/OMC_CSImage_CS4.png');
+}
+
+.om-CaseStudy5Background {
+    background-image: url('Images/Quotes/OMC_CSImage_CS5.png');
+}
+
+.om-WhatClientsSayBackground {
+    background-image: url('Images/Quotes/OMC_Image_WhatClientsSay.png');
+}
+
+.om-MinervistaBackground {
+    background-image: url('Images/Quotes/OMC_Image_Minervista.png');
+}
+
+.om-sliderContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.om-imageSlide {
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    width: 100%;
+    max-width: 511px;
+}
+
+.om-textSlide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 511px;
+}
+
+    .om-textSlide h1 {
+        padding-left: 180px;
+        padding-right: 110px;
+        padding-left: 30%;
+        padding-right: 15%;
+        font-size: 30px;
+        line-height: 36px;
+        padding-top: 2px;
+    }
+
+.om-sliderLinkContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 511px;
+}
+
+.om-sliderLink {
+    display: none;
+    position: absolute;
+    left: 30%;
+    font-size: 16px;
+    z-index: 3;
+    margin-top: -65px;
+}
+
+.om-titleEndQuote {
+    position: relative;
+    top: -4px;
+}
+
+.om-noBreak {
+    white-space: nowrap;
+}
+
+p.om-ecCite {
+    margin-bottom: 30px;
+}
+
+
+/* animations */
+.element.ng-hide-add, .om-testimonial.ng-hide-remove {
+    /* this is required as of 1.3x to properly
+     apply all styling in a show/hide animation */
+    transition: 0s linear all;
+}
+
+.element.ng-hide-add-active,
+.element.ng-hide-remove-active {
+    /* the transition is defined in the active class */
+    transition: all linear 10s;
+    -webkit-transition: all ease-in-out 0.5s;
+}
+
+.element.ng-hide-add {
+    opacity: 1;
+}
+
+    .element.ng-hide-add.ng-hide-add-active {
+        opacity: 0;
+    }
+
+.element.ng-hide-remove {
+    opacity: 1;
+}
+
+    .element.ng-hide-remove.ng-hide-remove-active {
+        opacity: 0;
+    }
+

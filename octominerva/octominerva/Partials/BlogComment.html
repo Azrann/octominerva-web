@@ -1,0 +1,76 @@
+<script type="text/ng-template" id="commentTemplate">
+    <td class="om-blogProfile">
+        <!--AVATAR-->
+        <img ng-src="{{comment.author.avatar}}" ng-show="comment.author.avatar" />
+        <img src="/Contents/Images/EmptyProfile.png" ng-hide="comment.author.avatar" />
+    </td>
+    <td class="om-blogComment">
+        <!--CONTENTS-->
+        <div>
+            <a ng-href="{{comment.author.URL}}" ng-show="comment.author.URL">
+                {{comment.author.name}}
+            </a>
+            <span ng-hide="comment.author.URL">
+                {{comment.author.name}}
+            </span>
+            <span class="om-blogCommentTime">{{comment.timelapse}}</span>
+        </div>
+        <div ng-bind-html="comment.htmlContent">
+        </div>
+        <div>
+            <a ng-click="comment.showForm = true">Reply</a>
+        </div>
+
+        <!--REPLY-->
+        <ng-form name="{{comment.formName}}" novalidate ng-if="comment.showForm">
+            <div class="om-blogCommentBox">
+                <textarea placeholder="Write your reply..." ng-model="comment.newComment.text"></textarea>
+                <div ng-show="comment.newComment.text">
+                    <table class="om-blogCommentTable">
+                        <tr>
+                            <td class="om-commentLabel">
+                                Name
+                            </td>
+                            <td>
+                                <input type="text" required placeholder="required" ng-model="comment.newComment.name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="om-commentLabel">
+                                Email
+                            </td>
+                            <td>
+                                <input type="email" required placeholder="required" ng-model="comment.newComment.email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="om-commentLabel">
+                                Website
+                            </td>
+                            <td>
+                                <input type="url" placeholder="optional" ng-model="comment.newComment.URL" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="om-sendBlogComment">
+                    <button ng-click="sendReply(comment)" ng-show="comment.newComment.text">Send</button>
+                    <button ng-click="comment.showForm = false">Cancel</button>
+                </div>
+
+            </div>
+        </ng-form>
+
+        <!--SUB-COMMENTS-->
+        <table class="om-blogCommentTable om-blogSubComment" ng-if="comment.comments.length">
+            <tr ng-repeat="comment in comment.comments" ng-include="'commentTemplate'">
+            </tr>
+        </table>
+    </td>
+</script>
+
+<table ng-controller="BlogCommentController" class="om-blogCommentTable">
+    <tr ng-repeat="comment in comments" ng-include="'commentTemplate'">
+        
+    </tr>
+</table>

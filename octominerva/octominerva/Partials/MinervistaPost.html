@@ -1,0 +1,89 @@
+<img class="om-mainPaneBackground" src="Contents/Images/Backgrounds/Empty.jpg" />
+
+<div class="om-mainContents om-MinervistaBackground">
+    <h1>Minervista</h1>
+    <h2 class="om-blogPostTitle">
+        {{post.title}}
+    </h2>
+    <div class="om-blogPostAuthor">{{post.author.name}}</div>
+    <div class="om-blogPostDate">{{post.dateString}}</div>
+    <div class="om-blogPostContent" ng-bind-html="htmlContent"></div>
+    <table class="om-blogNavTable">
+        <tr>
+            <td>
+                <div ng-show="previousPost">
+                    <a ng-href="{{previousPostUrl}}"><img src="/Contents/Images/OMC_Arrow_left.png" /></a>
+                    <a ng-href="{{previousPostUrl}}">{{previousPost.title}}</a>
+                </div>
+            </td>
+            <td align="right">
+                <div ng-show="nextPost">
+                    <a ng-href="{{nextPostUrl}}"><img src="/Contents/Images/OMC_Arrow.png" /></a>
+                    <a ng-href="{{nextPostUrl}}">{{nextPost.title}}</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>
+        Discussion
+    </h2>
+    <div class="om-blogCommentCount">
+        1 Comment
+    </div>
+    <table class="om-blogCommentTable">
+        <tr>
+            <td class="om-blogProfile">
+                <img src="/Contents/Images/EmptyProfile.png" />
+            </td>
+            <td class="om-blogComment">
+                <form name="scform" novalidate ng-submit="sendComment(scform)">
+                    <div class="om-blogCommentBox">
+                        <textarea placeholder="Join the discussion..." ng-model="newComment.text"></textarea>
+                        <div ng-show="newComment.text">
+                            <table class="om-blogCommentTable" ng-show="newComment.text">
+                                <tr>
+                                    <td class="om-commentLabel">
+                                        Name
+                                    </td>
+                                    <td>
+                                        <input type="text" required placeholder="required" ng-model="newComment.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="om-commentLabel">
+                                        Email
+                                    </td>
+                                    <td>
+                                        <input type="email" required placeholder="required" ng-model="newComment.email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="om-commentLabel">
+                                        Website
+                                    </td>
+                                    <td>
+                                        <input type="url" placeholder="optional" ng-model="newComment.URL" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="om-sendBlogComment">
+                                <button ng-disabled="scform.$invalid || sendingComment">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+
+        <blogcomments post="post" comments="postComments">
+        </blogcomments>
+
+</div>
+
+<script>
+    setupBackgroundResizer();
+</script>
+

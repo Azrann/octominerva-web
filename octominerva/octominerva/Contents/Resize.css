@@ -1,0 +1,94 @@
+/* we have to add fixed sizes adapted properly to different devices */
+/* by now we'll just take a generic % resize approach */
+
+/******************* resizing ******************/
+
+/* default for big screens */
+.om-mainPane {
+    left: 0px;
+    width: 70%;
+}
+
+.om-selectorPane {
+    left: 70%;
+    right: 0px;
+}
+
+.om-mobileSelectorPane, .om-mobileSelectorSwitch {
+    display: none;
+}
+
+.om-mainLogo, .om-mainContents {
+    width: 50%;
+    min-width: 380px;
+}
+
+.om-mainMobileLogo {
+    display: none;
+}
+
+@media (max-width: 1500px) {
+    .om-mainLogo, .om-mainContents {
+        width: 70%;
+    }
+
+    .om-mainContents {
+        padding-left: 155px;
+    }
+
+    .om-mainLogo {
+        padding-right: 205px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .om-mainPane {
+        /*color: red;*/
+        overflow: auto;
+    }
+
+    body, .om-mainNav, .om-navLink {
+        font-size: 12px;
+    }
+
+    .om-mainContents h3, .om-mainContents h2 {
+        font-size: 16px;
+    }
+
+    .om-mainContents h1 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .om-mainLogo, .om-mainContents {
+        position: relative;
+        width: auto;
+        top: auto;
+        min-width: initial;
+    }
+
+    .om-mainLogo {
+        display: block;
+    }
+
+    .om-mainContents {
+        background-position-x: 35px;
+        padding-left: 180px;
+        padding-right: 10px;
+    }
+
+    .om-sliderContainer {
+        height: 270px;
+        left: 38px;
+        width: 500px;
+    }
+
+    .om-sliderLink {
+        font-size: 14px;
+    }
+
+    .om-textSlide h1 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}

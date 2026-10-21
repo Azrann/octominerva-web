@@ -1,0 +1,146 @@
+<img class="om-mainPaneBackground" src="Contents/Images/Backgrounds/OMC_BackImage_Home.jpg" />
+
+<div class="om-mainContents oom-HowItWorksBackground">
+    <div class="om-sliderContainer">
+        <div class="om-textSlides">
+            <div class="om-textSlide" data-slide-id="1" data-link="#/casestudy1">
+                <h1>
+                    Let's spend a couple of hours talking about a bloke in 
+                    <span class="om-noBreak">
+                        Lycra
+                        <img class="om-titleEndQuote" src="Contents/Images/OMC_EndQuote.png">
+                    </span>
+                </h1>
+            </div>
+            <div class="om-textSlide" data-slide-id="2" data-link="#/casestudy2">
+                <h1>
+                    Wake from the sleep of habit and view your organisation from a fresh 
+                    <span class="om-noBreak">
+                        perspective
+                        <img class="om-titleEndQuote" src="Contents/Images/OMC_EndQuote.png">
+                    </span>
+                </h1>
+            </div>
+            <div class="om-textSlide" data-slide-id="3" data-link="#/casestudy3">
+                <h1>
+                    What impact has the last hundred days had on
+                    <span class="om-noBreak">
+                        you...?
+                        <img class="om-titleEndQuote" src="Contents/Images/OMC_EndQuote.png">
+                    </span>
+                </h1>
+            </div>
+            <div class="om-textSlide" data-slide-id="4" data-link="#/casestudy4">
+                <h1>
+                    Because I'm afraid to say that if you give a man a target to aim at, he
+                    <span class="om-noBreak">
+                        will...
+                        <img class="om-titleEndQuote" src="Contents/Images/OMC_EndQuote.png">
+                    </span>
+                </h1>
+            </div>
+            <div class="om-textSlide" data-slide-id="5" data-link="#/casestudy5">
+                <h1>
+                    Building better relationships with the help of Caravaggio's
+                    <span class="om-noBreak">
+                        Cardsharps
+                        <img class="om-titleEndQuote" src="Contents/Images/OMC_EndQuote.png">
+                    </span>
+                </h1>
+            </div>
+
+            <div class="om-sliderLinkContainer">
+                <a href="#/minervista" class="om-navLink om-sliderLink">
+                    Read more
+                </a>
+            </div>
+        </div>
+        <div class="om-imageSlides">
+            <img class="om-imageSlide" data-slide-id="1" src="/Contents/Images/Quotes/OMC_HomeImage_CS1.png" />
+            <img class="om-imageSlide" data-slide-id="2" src="/Contents/Images/Quotes/OMC_HomeImage_CS2.png" />
+            <img class="om-imageSlide" data-slide-id="3" src="/Contents/Images/Quotes/OMC_HomeImage_CS3.png" />
+            <img class="om-imageSlide" data-slide-id="4" src="/Contents/Images/Quotes/OMC_HomeImage_CS4.png" />
+            <img class="om-imageSlide" data-slide-id="5" src="/Contents/Images/Quotes/OMC_HomeImage_CS5.png" />
+        </div>
+    </div>
+</div>
+
+
+<script>
+    setupBackgroundResizer();
+    var homeSlider = function () {
+        var FINAL_LEFT = -200;
+        var INITIAL_LEFT = +200;
+        var ANIMATION_LENGTH = 500;
+        var BOTTOM_DISTANCE = 0;
+        var ANIMATION_EASING = "ease";
+
+        var container = $(".om-mainContents");
+        var images = $(".om-imageSlide");
+        var texts = $(".om-textSlide");
+        var currentSlideId = -1;
+        var link = $(".om-sliderLink");
+
+        var internalId = setInterval(function () {
+            // deactivate interval if not in home page
+            if (window.location.href.toString().search("/home") == -1) {
+                clearInterval(internalId);
+            }
+            else {
+                slideNext();
+            }
+        }, 5000);
+
+        slideNext();
+
+        $(window).resize(function () {
+            try {
+                link.prop("href", $(texts[currentSlideId]).data("link")).css({
+                    top: $(images[currentSlideId]).height() - BOTTOM_DISTANCE
+                });
+            } catch (ex) {
+                // let's eat 'em!
+            }
+        });
+
+        function slideNext() {
+            var oldSlideId = currentSlideId;
+            currentSlideId = (currentSlideId + 1) % 5;
+
+            if (oldSlideId != -1) {
+                $(texts[oldSlideId]).animate({
+                    left: FINAL_LEFT,
+                    opacity: 0
+                },
+                ANIMATION_LENGTH, function () {
+                    $(images[oldSlideId]).hide();
+                });
+
+                $(images[oldSlideId]).fadeOut(ANIMATION_LENGTH);
+            }
+
+            $(texts[currentSlideId]).css({
+                left: INITIAL_LEFT,
+                opacity: 0
+            }).show().animate({
+                left: 0,
+                opacity: 1
+            },
+            ANIMATION_LENGTH, function () {
+                link.prop("href", $(texts[currentSlideId]).data("link"));
+            });
+
+            $(images[currentSlideId]).fadeIn(ANIMATION_LENGTH, function () {
+                if (link.is(":visible")) {
+                    return;
+                }
+
+                link.css({
+                    top: $(images[currentSlideId]).height() - BOTTOM_DISTANCE
+                }).fadeIn();
+            });
+
+
+        }
+    }();
+</script>

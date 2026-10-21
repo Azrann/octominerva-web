@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Octominerva v2.0</title>
+    <script data-main="Scripts/Main" src="Scripts/lib/require.js"></script>
+    <link type="text/css" rel="stylesheet" href="Contents/Octominerva.css" />
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+</head>
+<body ng-controller="SelectorController as sc">
+    <a class="om-mainMobileLogo" href="#/home"></a>
+
+    <div class="om-loadPane" ng-hide="selectorLoaded">
+        <img class="om-loadImage" src="/Contents/Images/OMC_Logo.png" width="300" />
+    </div>
+
+    <div class="om-selectorPane">
+        <selectorPanel></selectorPanel>
+    </div>
+
+    <button type="button" ng-click="mobileSelectorOpen = !mobileSelectorOpen" class="om-mobileSelectorSwitch" ng-class="{'om-open': mobileSelectorOpen}">{{mobileSelectorOpen ? "CLOSE" : "MENU"}}</button>
+    <div class="om-mobileSelectorPane" ng-class="{'om-open':mobileSelectorOpen}">
+        <selectorpanel></selectorpanel>
+    </div>
+
+    <div class="om-mainPane">
+        <a class="om-mainLogo" href="#/home"></a>
+
+        <div ng-view class="om-mainContainer">
+            <!-- Default view (while loading JS) -->
+        </div>
+
+    </div>
+
+
+</body>
+</html>

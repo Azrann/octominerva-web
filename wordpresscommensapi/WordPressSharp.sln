@@ -1,0 +1,44 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressSharp", "WordPressSharp.csproj", "{7A938355-0B6B-48B7-97FB-C0C09015307B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9DCC7403-CC2A-45B1-82E1-634E7EAEA63B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPressTest", "..\WordPressTest\WordPressTest.csproj", "{F23901AE-0DD6-4CE9-9F8E-B013554B74C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BB64C275-3280-4FF7-986C-6F716B682493}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctominervaAPI", "OctominervaAPI\OctominervaAPI.csproj", "{EB8A09C0-8E1A-4CD6-A359-958E56AE2F10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A938355-0B6B-48B7-97FB-C0C09015307B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A938355-0B6B-48B7-97FB-C0C09015307B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A938355-0B6B-48B7-97FB-C0C09015307B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A938355-0B6B-48B7-97FB-C0C09015307B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F23901AE-0DD6-4CE9-9F8E-B013554B74C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F23901AE-0DD6-4CE9-9F8E-B013554B74C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F23901AE-0DD6-4CE9-9F8E-B013554B74C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F23901AE-0DD6-4CE9-9F8E-B013554B74C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8A09C0-8E1A-4CD6-A359-958E56AE2F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8A09C0-8E1A-4CD6-A359-958E56AE2F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8A09C0-8E1A-4CD6-A359-958E56AE2F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8A09C0-8E1A-4CD6-A359-958E56AE2F10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
