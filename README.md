@@ -2,6 +2,39 @@
 
 Sitio Octominerva, prototipos web y cliente/API de comentarios WordPress.
 
+<!-- BEGIN project-context -->
+
+## Antigüedad y evidencia
+
+**Año de referencia de esta versión: 2015.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+
+- Archivo más reciente datable: **2015-03-04**, [`octominerva/octominerva/Partials/WhatClientsSay2.html`](octominerva/octominerva/Partials/WhatClientsSay2.html); fecha del commit que modificó el archivo, recuperada del Git local.
+- Primer registro entre los repositorios Git originales incluidos: **2014-10-05**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
+- Dependencia fechada más reciente entre las comprobadas: [Microsoft.AspNet.Cors 5.2.2](https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.2), publicada el **2014-08-28** (versión declarada), en [`wordpresscommensapi/packages.config`](wordpresscommensapi/packages.config).
+- Referencia adicional: destino `v4.5` en [`octominerva/octominerva/octominerva.csproj`](octominerva/octominerva/octominerva.csproj); su [versión estable se publicó el 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+
+La publicación de una dependencia sitúa la configuración conservada a partir de esa versión, si la referencia es válida. Una actualización de paquetes puede ser mucho más reciente que el inicio del proyecto. No se restauraron paquetes para comprobarlo.
+
+Se descartaron las marcas de tiempo de la copia de octubre de 2026 y los documentos generados durante esta revisión. Las fechas recuperables no garantizan que no existan cambios posteriores sin datar.
+
+Años de referencia por componente (archivo más reciente datable):
+
+| Componente | Año |
+| --- | --- |
+| [`octominerva`](octominerva/) | 2015 |
+| [`wordpresscommensapi`](wordpresscommensapi/) | 2014 |
+
+## Por qué merece la pena mirarlo
+
+La presentación web, el CMS WordPress y el puente XML-RPC/.NET permiten estudiar una integración entre tecnologías distintas. Lo más interesante es el límite entre el contenido publicado en WordPress y los consumidores del sitio.
+
+Puntos de entrada al código:
+
+- [`octominerva/octominerva/Partials`](octominerva/octominerva/Partials/)
+- [`wordpresscommensapi/WordPressClient.cs`](wordpresscommensapi/WordPressClient.cs)
+
+<!-- END project-context -->
+
 ## Contenido
 
 | Directorio | Función |
