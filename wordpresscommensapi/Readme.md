@@ -1,29 +1,31 @@
+**Languages:** [English](Readme.md) · [Español](README.es.md)
+
 # wordpresscommensapi
 
-Biblioteca WordPressSharp de acceso XML-RPC a WordPress y aplicación ASP.NET MVC OctominervaAPI que permite añadir comentarios.
+WordPressSharp library for XML-RPC access to WordPress and an ASP.NET MVC OctominervaAPI application that supports adding comments.
 
-Documentación basada en los archivos locales revisados el 21 de octubre de 2026.
+Documentation based on local files reviewed on 21 October 2026.
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2014.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2014.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2014-12-06**, [`wordpresscommensapi/OctominervaAPI/Controllers/HomeController.cs`](OctominervaAPI/Controllers/HomeController.cs); fecha del commit que modificó el archivo, recuperada del Git local.
-- Primer registro del repositorio Git original que contiene este código: **2014-12-04**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
-- Dependencia fechada más reciente entre las comprobadas: [Microsoft.AspNet.Cors 5.2.2](https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.2), publicada el **2014-08-28** (versión declarada), en [`wordpresscommensapi/packages.config`](packages.config).
-- Referencia adicional: destino `v4.5` en [`wordpresscommensapi/WordPressSharp.csproj`](WordPressSharp.csproj); su [versión estable se publicó el 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+- Most recent datable file: **2014-12-06**, [`wordpresscommensapi/OctominervaAPI/Controllers/HomeController.cs`](OctominervaAPI/Controllers/HomeController.cs); date of the commit modifying the file, recovered from local Git history.
+- First record in the original Git repository containing this code: **2014-12-04**. This may be an import and does not establish when the code was first written.
+- Most recently published dependency among those checked: [Microsoft.AspNet.Cors 5.2.2](https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.2), published on **2014-08-28** (declared version), in [`wordpresscommensapi/packages.config`](packages.config).
+- Additional reference: target `v4.5` in [`wordpresscommensapi/WordPressSharp.csproj`](WordPressSharp.csproj); its [stable release was published on 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). This indicates the technology generation; earlier preview releases may have existed.
 
-La publicación de una dependencia sitúa la configuración conservada a partir de esa versión, si la referencia es válida. Una actualización de paquetes puede ser mucho más reciente que el inicio del proyecto. No se restauraron paquetes para comprobarlo.
+A dependency's publication places the preserved configuration at or after that version, if the reference is valid. Package updates may be much newer than the project's beginnings. Packages were not restored to verify this.
 
-Se descartaron las marcas de tiempo de la copia de octubre de 2026 y los documentos generados durante esta revisión. Las fechas recuperables no garantizan que no existan cambios posteriores sin datar.
+October 2026 copy timestamps and documents generated during this review were excluded. Recoverable dates do not guarantee that there are no later, undated changes.
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-WordPressClient ofrece una interfaz C# tipada sobre XML-RPC y la aplicación MVC la conecta con comentarios del sitio. Es interesante seguir ese puente entre un CMS PHP y una aplicación .NET.
+WordPressClient provides a typed C# interface over XML-RPC, and the MVC application connects it to site comments. Follow this bridge between a PHP CMS and a .NET application.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`WordPressClient.cs`](WordPressClient.cs)
 - [`IWordPressService.cs`](IWordPressService.cs)
@@ -31,39 +33,39 @@ Puntos de entrada al código:
 
 <!-- END project-context -->
 
-## Estructura y responsabilidades
+## Structure and responsibilities
 
-| Ruta | Responsabilidad |
+| Path | Responsibility |
 | --- | --- |
-| `WordPressSharp.csproj, WordPressClient.cs, IWordPressService.cs` | Cliente y contratos XML-RPC para publicaciones, medios, términos, usuarios y comentarios. |
-| `Models/` | Modelos de intercambio de WordPress. |
-| `WordPressSiteConfig.cs` | URL base, usuario, contraseña e identificador de blog. |
-| `OctominervaAPI/Controllers/HomeController.cs` | Crea comentarios mediante WordPressClient. |
-| `OctominervaAPI/` | Aplicación MVC y configuración CORS. |
+| `WordPressSharp.csproj, WordPressClient.cs, IWordPressService.cs` | XML-RPC client and contracts for posts, media, terms, users, and comments. |
+| `Models/` | WordPress interchange models. |
+| `WordPressSiteConfig.cs` | Base URL, username, password, and blog identifier. |
+| `OctominervaAPI/Controllers/HomeController.cs` | Creates comments using WordPressClient. |
+| `OctominervaAPI/` | MVC application and CORS configuration. |
 
-## Tecnologías y requisitos
+## Technologies and requirements
 
-Windows, Visual Studio/MSBuild, .NET Framework 4.5, NuGet, ASP.NET MVC 4 y un sitio WordPress con XML-RPC accesible.
+Windows, Visual Studio/MSBuild, .NET Framework 4.5, NuGet, ASP.NET MVC 4, and a WordPress site with accessible XML-RPC.
 
-Destinos leídos de los proyectos: `v4.5`.
+Targets read from project files: `v4.5`.
 
-## Preparación y arranque
+## Setup and startup
 
-Abrir WordPressSharp.sln, restaurar NuGet y seleccionar OctominervaAPI para IIS Express. Configurar un WordPress de pruebas antes de llamar a la operación de comentarios.
+Open WordPressSharp.sln, restore NuGet packages, and select OctominervaAPI for IIS Express. Configure a test WordPress installation before invoking comment operations.
 
-Soluciones presentes: `WordPressSharp.sln`.
+Solutions present: `WordPressSharp.sln`.
 
-## Configuración e integraciones
+## Configuration and integrations
 
-El controlador fija la configuración del sitio; la contraseña visible está vacía. Un perfil .pubxml.user es configuración privada local. No se identificó una contraseña WordPress no vacía en el controlador revisado.
+The controller hardcodes site configuration; the visible password is empty. A .pubxml.user profile is private local configuration. No nonempty WordPress password was identified in the reviewed controller.
 
-## Estado de esta copia
+## Status of this copy
 
-Relacionado con la integración de comentarios de octominerva. Revisar los permisos WordPress y el acceso a la API antes de habilitar escrituras.
+Related to octominerva's comment integration. Review WordPress permissions and API access before enabling writes.
 
-La revisión fue estática: no se restauraron dependencias, no se compiló ni se ejecutaron aplicaciones o pruebas. Los comandos anteriores son instrucciones de preparación, no resultados de validación. Las versiones indicadas son las del código conservado.
+The review was static: dependencies were not restored, and applications and tests were neither built nor run. The commands above are setup instructions, not validation results. Listed versions describe the preserved code.
 
 
-## Copia pública
+## Public copy
 
-Las credenciales originales se han retirado o sustituido por `REPLACE_WITH_YOUR_VALUE`. Los datos locales, sesiones, certificados privados y perfiles de despliegue se omiten. Configurar servicios y credenciales propios antes de ejecutar. La compilación y el funcionamiento con servicios externos no se han validado.
+Original credentials have been removed or replaced with `REPLACE_WITH_YOUR_VALUE`. Local data, sessions, private certificates, and deployment profiles are omitted. Configure your own services and credentials before running. Building and operation with external services have not been validated.

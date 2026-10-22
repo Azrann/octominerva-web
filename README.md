@@ -1,70 +1,72 @@
+**Languages:** [English](README.md) · [Español](README.es.md)
+
 # octominerva-web
 
-Sitio Octominerva, prototipos web y cliente/API de comentarios WordPress.
+Octominerva site, web prototypes, and WordPress comment client/API.
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2015.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2015.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2015-03-04**, [`octominerva/octominerva/Partials/WhatClientsSay2.html`](octominerva/octominerva/Partials/WhatClientsSay2.html); fecha del commit que modificó el archivo, recuperada del Git local.
-- Primer registro entre los repositorios Git originales incluidos: **2014-10-05**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
-- Dependencia fechada más reciente entre las comprobadas: [Microsoft.AspNet.Cors 5.2.2](https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.2), publicada el **2014-08-28** (versión declarada), en [`wordpresscommensapi/packages.config`](wordpresscommensapi/packages.config).
-- Referencia adicional: destino `v4.5` en [`octominerva/octominerva/octominerva.csproj`](octominerva/octominerva/octominerva.csproj); su [versión estable se publicó el 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+- Most recent datable file: **2015-03-04**, [`octominerva/octominerva/Partials/WhatClientsSay2.html`](octominerva/octominerva/Partials/WhatClientsSay2.html); date of the commit modifying the file, recovered from local Git history.
+- Earliest record among the original Git repositories included: **2014-10-05**. This may be an import and does not establish when the code was first written.
+- Most recently published dependency among those checked: [Microsoft.AspNet.Cors 5.2.2](https://www.nuget.org/packages/Microsoft.AspNet.Cors/5.2.2), published on **2014-08-28** (declared version), in [`wordpresscommensapi/packages.config`](wordpresscommensapi/packages.config).
+- Additional reference: target `v4.5` in [`octominerva/octominerva/octominerva.csproj`](octominerva/octominerva/octominerva.csproj); its [stable release was published on 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). This indicates the technology generation; earlier preview releases may have existed.
 
-La publicación de una dependencia sitúa la configuración conservada a partir de esa versión, si la referencia es válida. Una actualización de paquetes puede ser mucho más reciente que el inicio del proyecto. No se restauraron paquetes para comprobarlo.
+A dependency's publication places the preserved configuration at or after that version, if the reference is valid. Package updates may be much newer than the project's beginnings. Packages were not restored to verify this.
 
-Se descartaron las marcas de tiempo de la copia de octubre de 2026 y los documentos generados durante esta revisión. Las fechas recuperables no garantizan que no existan cambios posteriores sin datar.
+October 2026 copy timestamps and documents generated during this review were excluded. Recoverable dates do not guarantee that there are no later, undated changes.
 
-Años de referencia por componente (archivo más reciente datable):
+Reference years by component (most recent datable file):
 
-| Componente | Año |
+| Component | Year |
 | --- | --- |
 | [`octominerva`](octominerva/) | 2015 |
 | [`wordpresscommensapi`](wordpresscommensapi/) | 2014 |
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-La presentación web, el CMS WordPress y el puente XML-RPC/.NET permiten estudiar una integración entre tecnologías distintas. Lo más interesante es el límite entre el contenido publicado en WordPress y los consumidores del sitio.
+The web presentation, WordPress CMS, and XML-RPC/.NET bridge demonstrate integration across different technologies. The boundary between WordPress-published content and site consumers is the most interesting part.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`octominerva/octominerva/Partials`](octominerva/octominerva/Partials/)
 - [`wordpresscommensapi/WordPressClient.cs`](wordpresscommensapi/WordPressClient.cs)
 
 <!-- END project-context -->
 
-## Contenido
+## Contents
 
-| Directorio | Función |
+| Directory | Function |
 | --- | --- |
-| [`octominerva/`](octominerva/) | Sitio de presentación de Octominerva con páginas y parciales dinámicos, acompañado de una instalación WordPress para el blog y código de integración de comentarios. |
-| [`wordpresscommensapi/`](wordpresscommensapi/) | Biblioteca WordPressSharp de acceso XML-RPC a WordPress y aplicación ASP.NET MVC OctominervaAPI que permite añadir comentarios. |
+| [`octominerva/`](octominerva/) | Octominerva presentation site with pages and dynamic partials, accompanied by a WordPress blog installation and comment integration code. |
+| [`wordpresscommensapi/`](wordpresscommensapi/) | WordPressSharp library for XML-RPC access to WordPress and an ASP.NET MVC OctominervaAPI application that supports adding comments. |
 
-La configuración WordPress conserva únicamente valores de ejemplo. WordPress y las bibliotecas incluidas mantienen sus avisos originales.
+WordPress configuration retains only example values. WordPress and bundled libraries retain their original notices.
 
-## Requisitos y preparación
+## Requirements and setup
 
-HTML/CSS/JavaScript, PHP/WordPress, ASP.NET MVC y WordPressSharp/XML-RPC.
+HTML/CSS/JavaScript, PHP/WordPress, ASP.NET MVC, and WordPressSharp/XML-RPC.
 
-Esta es una copia histórica. Consultar los archivos de proyecto y los README de cada componente para sus versiones y dependencias. Restaurar NuGet/npm desde la carpeta correspondiente; las bibliotecas internas pueden necesitar reconstrucción. Preparar las bases de datos y los servicios externos con cuentas propias.
+This is a historical copy. Consult each component's project files and README for versions and dependencies. Restore NuGet/npm from the appropriate folder; internal libraries may need rebuilding. Prepare databases and external services using your own accounts.
 
-Soluciones conservadas:
+Preserved solutions:
 
 - `octominerva/octominerva_web.sln`
 - `wordpresscommensapi/WordPressSharp.sln`
 
-## Configuración y seguridad
+## Configuration and security
 
-Los secretos originales se han eliminado o sustituido por `REPLACE_WITH_YOUR_VALUE`. Buscar este marcador antes de ejecutar y aportar los valores mediante configuración local o variables de entorno. Las sesiones, claves privadas, certificados de firma, bases de datos, registros, perfiles de despliegue y paquetes binarios no se publican. El `.gitignore` protege estos archivos locales.
+Original secrets have been removed or replaced with `REPLACE_WITH_YOUR_VALUE`. Search for this marker before running and provide values through local configuration or environment variables. Sessions, private keys, signing certificates, databases, logs, deployment profiles, and binary packages are not published. The `.gitignore` protects these local files.
 
-Se publica un historial nuevo: los commits antiguos permanecen únicamente en la copia local original. Los valores de ejemplo no permiten conectarse a los servicios originales.
+A fresh history is published: old commits remain only in the original local copy. Example values cannot connect to the original services.
 
-## Estado de validación
+## Validation status
 
-Se realizó una revisión estática y un escaneo de secretos antes de publicar. No se ejecutaron aplicaciones, operaciones de trading, despliegues ni pruebas que contacten servicios externos. No se garantiza la compilación con herramientas actuales. Algunos proyectos necesitan dependencias históricas y activos que no están incluidos.
+A static review and secret scan were performed before publication. Applications, trading operations, deployments, and tests contacting external services were not run. Building with current tools is not guaranteed. Some projects need historical dependencies and assets that are not included.
 
-## Licencias y procedencia
+## Licenses and provenance
 
-Se conservan las licencias y atribuciones de terceros presentes en el código. No se añade una licencia global a los componentes que no la tenían. Esta importación conserva fuentes locales y no afirma ser una versión actual del proyecto original.
+Third-party licenses and attributions present in the code are retained. No blanket license is added to components that lacked one. This import preserves local sources and does not claim to be a current version of the original project.

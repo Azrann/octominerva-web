@@ -1,26 +1,28 @@
+**Languages:** [English](Readme.md) · [Español](README.es.md)
+
 # octominerva
 
-Sitio de presentación de Octominerva con páginas y parciales dinámicos, acompañado de una instalación WordPress para el blog y código de integración de comentarios.
+Octominerva presentation site with pages and dynamic partials, accompanied by a WordPress blog installation and comment integration code.
 
-Documentación basada en los archivos locales revisados el 21 de octubre de 2026.
+Documentation based on local files reviewed on 21 October 2026.
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2015.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2015.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2015-03-04**, [`octominerva/octominerva/Partials/WhatClientsSay2.html`](octominerva/Partials/WhatClientsSay2.html); fecha del commit que modificó el archivo, recuperada del Git local.
-- Primer registro del repositorio Git original que contiene este código: **2014-10-05**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
-- Referencia adicional: destino `v4.5` en [`octominerva/octominerva/octominerva.csproj`](octominerva/octominerva.csproj); su [versión estable se publicó el 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). Es una pista de generación tecnológica; pudieron existir versiones preliminares anteriores.
+- Most recent datable file: **2015-03-04**, [`octominerva/octominerva/Partials/WhatClientsSay2.html`](octominerva/Partials/WhatClientsSay2.html); date of the commit modifying the file, recovered from local Git history.
+- First record in the original Git repository containing this code: **2014-10-05**. This may be an import and does not establish when the code was first written.
+- Additional reference: target `v4.5` in [`octominerva/octominerva/octominerva.csproj`](octominerva/octominerva.csproj); its [stable release was published on 2012-08-15](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework). This indicates the technology generation; earlier preview releases may have existed.
 
-Se descartaron las marcas de tiempo de la copia de octubre de 2026 y los documentos generados durante esta revisión. Las fechas recuperables no garantizan que no existan cambios posteriores sin datar.
+October 2026 copy timestamps and documents generated during this review were excluded. Recoverable dates do not guarantee that there are no later, undated changes.
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-La separación entre las páginas del sitio y el contenido servido por WordPress permite explorar una composición desacoplada de presentación y CMS. Las páginas y parciales propios son un mejor punto de entrada que recorrer todo el WordPress incluido.
+Separating site pages from WordPress-served content lets you explore decoupled presentation and CMS composition. Custom pages and partials are a better starting point than navigating the entire bundled WordPress installation.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`octominerva/Index.html`](octominerva/Index.html)
 - [`octominerva/Partials`](octominerva/Partials/)
@@ -28,40 +30,40 @@ Puntos de entrada al código:
 
 <!-- END project-context -->
 
-## Estructura y responsabilidades
+## Structure and responsibilities
 
-| Ruta | Responsabilidad |
+| Path | Responsibility |
 | --- | --- |
-| `octominerva/Index.html, octominerva/Partials/` | Sitio principal y secciones de presentación, casos, contacto y blog. |
-| `octominerva/Scripts/` | Código de la interfaz y bibliotecas. |
-| `blog/blog/` | Instalación WordPress con configuración, plugins y temas. |
-| `blog/blog/BlogComService.js` | Integración de comentarios del blog. |
-| `src/` | Contenido adicional de la copia; revisar su función antes de redistribuir. |
-| `octominerva_web.sln` | Solución de Visual Studio; proyecto web .NET Framework 4.5. |
+| `octominerva/Index.html, octominerva/Partials/` | Main site and presentation, case study, contact, and blog sections. |
+| `octominerva/Scripts/` | Interface code and libraries. |
+| `blog/blog/` | WordPress installation with configuration, plugins, and themes. |
+| `blog/blog/BlogComService.js` | Blog comment integration. |
+| `src/` | Additional copied content; review its role before redistribution. |
+| `octominerva_web.sln` | Visual Studio solution; .NET Framework 4.5 web project. |
 
-## Tecnologías y requisitos
+## Technologies and requirements
 
-Servidor HTTP para la interfaz; PHP y MySQL compatibles con la copia WordPress para el blog. IIS/Visual Studio puede alojar el contenedor del sitio si se configura PHP.
+An HTTP server for the interface; PHP and MySQL compatible with this WordPress copy for the blog. IIS/Visual Studio can host the site container if PHP is configured.
 
-Destinos leídos de los proyectos: `v4.5`.
+Targets read from project files: `v4.5`.
 
-## Preparación y arranque
+## Setup and startup
 
-Servir la carpeta octominerva y preparar el blog por separado con una base nueva. Adaptar las rutas y servicios de comentarios al entorno local.
+Serve the octominerva folder and prepare the blog separately with a new database. Adapt comment service paths and endpoints to the local environment.
 
-Soluciones presentes: `octominerva_web.sln`.
+Solutions present: `octominerva_web.sln`.
 
-## Configuración e integraciones
+## Configuration and integrations
 
-blog/blog/wp-config.php contiene credenciales de base de datos y material de autenticación de WordPress. Sustituirlos por valores propios y revisar las URLs del sitio y del blog.
+blog/blog/wp-config.php contains database credentials and WordPress authentication material. Replace them with your own values and review site and blog URLs.
 
-## Estado de esta copia
+## Status of this copy
 
-wordpresscommensapi contiene una API de comentarios relacionada con Octominerva. Revisar licencias de temas, plugins y plantillas antes de redistribuir la copia completa.
+wordpresscommensapi contains a comment API related to Octominerva. Review theme, plugin, and template licenses before redistributing the complete copy.
 
-La revisión fue estática: no se restauraron dependencias, no se compiló ni se ejecutaron aplicaciones o pruebas. Los comandos anteriores son instrucciones de preparación, no resultados de validación. Las versiones indicadas son las del código conservado.
+The review was static: dependencies were not restored, and applications and tests were neither built nor run. The commands above are setup instructions, not validation results. Listed versions describe the preserved code.
 
 
-## Copia pública
+## Public copy
 
-Las credenciales originales se han retirado o sustituido por `REPLACE_WITH_YOUR_VALUE`. Los datos locales, sesiones, certificados privados y perfiles de despliegue se omiten. Configurar servicios y credenciales propios antes de ejecutar. La compilación y el funcionamiento con servicios externos no se han validado.
+Original credentials have been removed or replaced with `REPLACE_WITH_YOUR_VALUE`. Local data, sessions, private certificates, and deployment profiles are omitted. Configure your own services and credentials before running. Building and operation with external services have not been validated.
